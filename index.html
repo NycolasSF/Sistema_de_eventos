@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JIIF - Jogos Interno do IFMS</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <script type="text/javascript" src="js/efeitos.js"></script>
+  </head>
+  <body>
+    <header id="home">
+<!-- HEADER -->
+      <div class="cabecalho">
+        <div class="container-logo">
+          <img src="img/logo.png" alt="logo JIIF">
+        </div>
+        <h1>JOGOS INTERNOS DO INSTITUTO FEDERAL<div class="segundo-titulo">Campus Dourados</div></h1>
+      </div>
+<!-- NAV - MENU -->
+      <div id="icon-nav">
+        <div class="btn-abrir-menu" onclick="efeitos.abrir_menu()">
+              <div class="icon-menu">
+                <div class="rect um"></div>
+                <div class="rect dois"></div>
+                <div class="rect tres"></div>
+              </div> 
+          </div>
+      </div>    
+      <nav id="barra-menu">
+        <button class="btn-fechar-menu" onclick="efeitos.fechar_menu()">&times;</button>
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#modalidades">MODALIDADES</a></li>
+          <li><a href="#sobre">SOBRE</a></li>
+        </ul>
+      </nav>
+    </header>
+<!-- MAIN -->
+    <main>
+<!-- SLIDES SHOW -->
+      <section class="slidesShow">
+        
+      </section>
+<!-- MODALIDADES -->
+      <section id="modalidades">
+        <h1 class="title-modalidades">MODALIDADES</h1>
+        <div class="container-img-esportes-fundo">
+          <img class="img-primeira" src="img/barra-lateral.png"></img>
+          <img class="img-segunda" src="img/barra-lateral.png"></img>
+        </div>  
+        <div class="container-esportes">
+          <div class="esportes esportes-um"><p>ESPORTE 1</p></div>
+          <div class="esportes esportes-dois"><p>ESPORTE 2</p></div>
+          <div class="esportes esportes-tres"><p>ESPORTE 3</p></div>
+        </div>
+        <button class="btn-mostrar-mais-esportes">Mostrar Mais</button>
+      </section>
+    </main>
+  </body>
+</html>

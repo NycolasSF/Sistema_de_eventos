@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'Existence';
+  src: url(../fonts/existence/ExiL-OT/Existence-Light.otf);
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  width: 100%;
+  transition: background-color .5s;
+}
+:root{
+  --branco: #fff;
+  --preto: #000;
+  --vermelho: #e74c3c;
+  --preto-transparente: rgba(0, 0, 0, 0.45);
+  /*header*/
+  --barra-header: #669966;
+
+  /*Modalidades*/
+  --background-modalidades: #333333;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+/********MOBILE*******/
+/*----*HEADER*------*/
+header{
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Existence';
+  background: var(--barra-header);
+
+}
+.cabecalho{
+  font-family: 'Existence';
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items:  center;
+  height: 200px;
+  flex: 3;
+}
+.container-logo{
+  margin-left: 5%;
+  background-color: var(--branco);
+  box-shadow: 0px 5px 4.92px 1.08px rgba(0, 0, 0, 0.28);
+  width: 50vw;
+  height: 30vh;
+}
+.container-logo img{
+  flex: 2;
+  background: var(--branco);
+  height: 100%;
+  width: 100%;
+}
+.cabecalho h1{
+  text-align: center;
+  font-size: 2rem;
+}
+.segundo-titulo{
+  font-size: 1.5rem;
+}
+/*----nav-----*/
+#barra-menu{
+  height: 0;
+  display: none;
+  background: var(--preto);
+  justify-content: center;
+  transition: height .5s;
+}
+#barra-menu:active{
+  height: 100vh;
+  transition-duration: 0.8s;
+}
+nav a{
+  width: 50vw;
+  padding: 8px;
+  font-size: 1.5rem;
+  color: var(--branco);
+  display: block;
+  margin-top: 10%;
+  text-align: center;
+  border-bottom: solid 2px var(--branco);
+  transition: 0.5s;
+}
+.btn-fechar-menu{
+  text-decoration: none;
+  padding: .5rem;
+  background: var(--preto);
+  position: absolute;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50%;
+  border: none;
+  color: var(--vermelho);
+}
+/*icon de nav*/
+#icon-nav{
+  flex: 1;
+  background: var(--preto-transparente);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-menu{
+  width: 20vw;
+}
+.rect{
+  background: #fff;
+  height: 15px;
+  margin: 7%;
+  border-radius: 7px;
+}
+/*----*MAIN*------*/
+main{
+  font-family: 'Existence';
+}
+/*slidesShow*/
+
+/*modalidades*/
+#modalidades{
+  background: var(--background-modalidades);
+  height: 100vh;
+}
+.title-modalidades{
+  margin-top: 5%;
+  text-align: center;
+  margin-left: 25vw;
+  width: 50vw;
+  font-size: 2rem;
+  color: var(--branco);
+  border-bottom: solid 3px var(--branco);
+}
+.container-img-esportes-fundo{
+  width: 100vw;
+  position: absolute;
+}
+.img-primeira{
+  transform: rotate(180deg);
+}
+.img-segunda{
+  position: absolute;
+  right: 0
+}
+.container-esportes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.esportes{
+  margin: 2%;
+  font-size: 1.5rem;
+  flex: 2;
+  height: 25vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: var(--branco);
+}
+.esportes-um{
+  background: url(../img/esporte1.png) center center;
+  background-repeat: no-repeat;
+}
+.esportes-dois{
+  background: url(../img/esporte2.png) center center;
+  background-repeat: no-repeat;
+}
+.esportes-tres{
+  background: url(../img/esporte3.png) center center;
+  background-repeat: no-repeat;
+}
