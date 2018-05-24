@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Existence';
-  src: url(../fonts/existence/ExiL-OT/Existence-Light.otf);
+  src: url(../font/existence/ExiL-OT/Existence-Light.otf);
 }
 *{
   margin: 0;
   padding: 0;
 }
 body{
-  height: 100%;
-  width: 100%;
-  transition: background-color .5s;
+  height: 100vh;
+  width: 100vw;
+  transition: all .5s;
 }
 :root{
   --branco: #fff;
@@ -69,11 +69,15 @@ header{
 }
 /*----nav-----*/
 #barra-menu{
+  position: absolute;
+  z-index: 9;
+  width: 100vw;
   height: 0;
   display: none;
   background: var(--preto);
   justify-content: center;
-  transition: height .5s;
+  align-items: center;
+  transition: all .5s;
 }
 #barra-menu:active{
   height: 100vh;
@@ -91,12 +95,13 @@ nav a{
   transition: 0.5s;
 }
 .btn-fechar-menu{
+  position: absolute;
+  top: 10%;
   text-decoration: none;
   padding: .5rem;
   background: var(--preto);
-  position: absolute;
   right: 25px;
-  font-size: 36px;
+  font-size: 3rem;
   margin-left: 50%;
   border: none;
   color: var(--vermelho);
@@ -130,7 +135,6 @@ main{
   height: 100vh;
 }
 .title-modalidades{
-  margin-top: 5%;
   text-align: center;
   margin-left: 25vw;
   width: 50vw;
@@ -139,42 +143,101 @@ main{
   border-bottom: solid 3px var(--branco);
 }
 .container-img-esportes-fundo{
-  width: 100vw;
+  height: 100vh;
+  width:98vw;
+  margin: 0 auto;
   position: absolute;
 }
 .img-primeira{
   transform: rotate(180deg);
+  height:100vh;
 }
 .img-segunda{
+  height:100vh;
   position: absolute;
-  right: 0
+  left: 85vw;
 }
 .container-esportes{
+  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
-.esportes{
+.esportes{border: solid red;
+  z-index: 8;
+  width: 50vw;
   margin: 2%;
-  font-size: 1.5rem;
-  flex: 2;
-  height: 25vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 15px;
+}
+.esportes p{
+  text-align: center;
+  font-size: 1.5rem;
   color: var(--branco);
 }
-.esportes-um{
+/*IMG - ESPORTES 1 - 12*/
+.esportes-um{border: solid yellow;
   background: url(../img/esporte1.png) center center;
   background-repeat: no-repeat;
 }
-.esportes-dois{
+.esportes-dois{border: solid black;
   background: url(../img/esporte2.png) center center;
   background-repeat: no-repeat;
 }
-.esportes-tres{
+.esportes-tres{border: solid pink;
   background: url(../img/esporte3.png) center center;
   background-repeat: no-repeat;
+}
+.esportes-quatro{
+  background: url(../img/esporte4.png) center center;
+  background-repeat: no-repeat;
+}
+.esportes-cinco{
+  background: url(../img/esporte5.png) center center;
+  background-repeat: no-repeat;
+}
+.esportes-seis{
+  background: url(../img/esporte6.png) center center;
+  background-repeat: no-repeat;
+}
+.esportes-sete{
+  background: url(../img/esporte7.png) center center;
+  background-repeat: no-repeat;
+}
+.esportes-oito{
+  background: url(../img/esporte8.png) center center;
+  background-repeat: no-repeat;
+}.esportes-nove{
+  background: url(../img/esporte9.png) center center;
+  background-repeat: no-repeat;
+}.esportes-dez{
+  background: url(../img/esporte10.png) center center;
+  background-repeat: no-repeat;
+}
+.esportes-onze{
+  background: url(../img/esporte11.png) center center;
+  background-repeat: no-repeat;
+}.esportes-doze{
+  background: url(../img/esporte12.png) center center;
+  background-repeat: no-repeat;
+}
+.btn-mostrar-mais-esportes{
+  position: absolute;
+  top: 150%;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 1rem;
+  background: #669933
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 840px){
+  #icon-nav{
+    display: none;
+  }
+  #barra-menu{
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+  }
 }

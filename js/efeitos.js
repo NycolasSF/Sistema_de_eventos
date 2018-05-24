@@ -4,6 +4,7 @@ class Efeitos{
 		document.getElementById("barra-menu").style.display = "flex";
 		document.getElementById("icon-nav").style.display = "none";
 		document.body.style.backgroundColor = "rgba(0,0,0,0.9)";
+		document.href = "home";
 	}
 	fechar_menu(){
 		document.getElementById("barra-menu").style.height = "0";
@@ -13,4 +14,3 @@ class Efeitos{
 	}
 }
 var efeitos = new Efeitos();
-
