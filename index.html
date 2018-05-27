@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="shortcut icon" href="img/favicon.ico" />
     <script type="text/javascript" src="js/efeitos.js"></script>
+    <!-- REFERENCES: http://www.menucool.com/responsive-slider  -->
+    <link href="packs/ninja-slider/2/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="packs/ninja-slider/2/ninja-slider.js" type="text/javascript"></script>
   </head>
   <body>
     <header id="home">
@@ -18,13 +21,15 @@
       </div>
 <!-- NAV - MENU -->
       <div id="icon-nav">
-        <div class="btn-abrir-menu" onclick="efeitos.abrir_menu()">
-              <div class="icon-menu">
-                <div class="rect um"></div>
-                <div class="rect dois"></div>
-                <div class="rect tres"></div>
-              </div>
-          </div>
+        <a href="#barra-menu">
+          <div class="btn-abrir-menu" onclick="efeitos.abrir_menu()">
+                <div class="icon-menu">
+                  <div class="rect um"></div>
+                  <div class="rect dois"></div>
+                  <div class="rect tres"></div>
+                </div>
+            </div>
+        </a>
       </div>
       <nav id="barra-menu">
         <button  class="btn-fechar-menu" onclick="efeitos.fechar_menu()">&times;</button>
@@ -39,7 +44,38 @@
     <main>
 <!-- SLIDES SHOW -->
       <section class="slidesShow">
-
+        <!--start-->
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li>
+                        <a class="ns-img" href="img/slide01.png"></a>
+                        <div class="caption">Jogos Interno IFMS</div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/slide02.png"></a>
+                        <div class="caption">TOUCH·ENABLED</div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/slide03.png"></a>
+                        <div class="caption">VIDEO·AUDIO</div>
+                      </li>
+                    <li>
+                        <a class="ns-img" href="img/slide04.png"></a>
+                        <div class="caption">NON·JQUERY</div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/slide05.png"></a>
+                        <div class="caption">MOBILE·FRIENDLY</div>
+                    </li>
+                </ul>
+                <div class="navsWrapper">
+                    <div id="ninja-slider-prev"></div>
+                    <div id="ninja-slider-next"></div>
+                </div>
+            </div>
+        </div>
+        <!--end-->
       </section>
 <!-- MODALIDADES -->
       <section id="modalidades">

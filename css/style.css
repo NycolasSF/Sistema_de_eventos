@@ -1,7 +1,12 @@
 @font-face {
-  font-family: 'Existence';
+  font-family: 'Existence-Light';
   src: url(../font/existence/ExiL-OT/Existence-Light.otf);
 }
+@font-face {
+  font-family: 'Existence-StencilLight';
+  src: url(../font/existence/ExiSL-OT/Existence-StencilLight.otf)
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -12,6 +17,15 @@ body{
   transition: all .5s;
 }
 :root{
+  /*COR LOGO*/
+  --verde-logo: #84BA50;
+  --verde-logo-rbga: rgba(132,186,80, .8);
+  --amarelo-logo: #F2EC5C;
+  --amarelo-logo-rbga: rgba(242,236,92, .8);
+  --vermelho-logo: #AA252A;
+  --vermelho-logo-rbga: rgba(170,37,42, .8);
+
+
   --branco: #fff;
   --preto: #000;
   --vermelho: #e74c3c;
@@ -31,15 +45,14 @@ li{
 /********MOBILE*******/
 /*----*HEADER*------*/
 header{
-  height: 370px;
+  height: 250px;
   display: flex;
   flex-direction: column;
-  font-family: 'Existence';
   background: var(--barra-header);
 
 }
 .cabecalho{
-  font-family: 'Existence';
+  font-family: 'Existence-StencilLight';
   margin-top: 5%;
   display: flex;
   flex-direction: row;
@@ -70,7 +83,7 @@ header{
 /*----nav-----*/
 #barra-menu{
   position: absolute;
-  z-index: 9;
+  z-index: 999;
   width: 100vw;
   height: 0;
   display: none;
@@ -108,28 +121,39 @@ nav a{
 }
 /*icon de nav*/
 #icon-nav{
+  position: fixed;
+  z-index: 9999;
   flex: 1;
-  background: var(--preto-transparente);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .icon-menu{
-  width: 20vw;
+  width: 15vw;
 }
 .rect{
-  background: #fff;
+  background: #000;
   height: 15px;
   margin: 7%;
   border-radius: 7px;
 }
 /*----*MAIN*------*/
 main{
-  font-family: 'Existence';
+  font-family: 'Existence-Light';
 }
-/*slidesShow*/
+/*---slideSHOW--*/
+#ninja-slider .caption{
+}
+.slider-inner a{
+   -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.caption{
+  background: var(--vermelho-logo-rbga);
+}
 
-/*modalidades*/
+
+/*---modalidades---*/
 #modalidades{
   background: var(--background-modalidades);
   height: 100vh;
