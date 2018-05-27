@@ -12,5 +12,9 @@ class Efeitos{
 		document.getElementById("icon-nav").style.display = "flex";
 		document.body.style.backgroundColor = "rgb(255,255,255)";
 	}
+	linkClicado(){
+			document.getElementById("barra-menu").style.display = "none";
+			document.getElementById("icon-nav").style.display = "flex";
+	}
 }
 var efeitos = new Efeitos();
