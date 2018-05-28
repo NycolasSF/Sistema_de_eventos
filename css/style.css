@@ -54,36 +54,35 @@ header{
 .cabecalho{
   font-family: 'Existence-StencilLight';
   z-index: 99;
-  display: flex;
-  align-items: center;
   flex: 3;
 }
 .container-logo{
-  flex: 1;
   margin-top: 5vh;
-  margin-left: 5vw;
-  box-shadow: 0px 5px 4.92px 1.08px rgba(0, 0, 0, 0.28);
+  margin-left: 10vw;
   width: 30vw;
   height: 20vh;
   background-color: var(--branco);
+  box-shadow: 0px 5px 4.92px 1.08px rgba(0, 0, 0, 0.28);
 }
 .container-logo img{
-  flex: 1;
   height: 100%;
   width: 100%;
 }
-.cabecalho h1{
-  flex:3;
+.container-logo h1{
+  width: 100%;
+  margin-top: -5%;
+  background-color: var(--branco);
+  box-shadow: 0px 5px 4.92px 1.08px rgba(0, 0, 0, 0.28)
+  border: solid;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .segundo-titulo{
-  font-size: 1.2rem;
+  font-size: .8rem;
 }
 /*----nav-----*/
 #barra-menu{
   position: fixed;
-
   z-index: 999;
   width: 100vw;
   height: 0;
@@ -128,7 +127,7 @@ nav a{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 5vh;
   margin-left: 80vw;
 }
 .icon-menu{
@@ -157,20 +156,18 @@ main{
 /*---modalidades---*/
 #modalidades{
   background: var(--background-modalidades);
-  height: 100vh;
 }
 .title-modalidades{
+  padding: 2rem;
   text-align: center;
-  margin-left: 25vw;
+  margin: 0 auto;
   width: 50vw;
   font-size: 2rem;
   color: var(--branco);
   border-bottom: solid 3px var(--branco);
 }
 .container-img-esportes-fundo{
-  height: 100vh;
-  width:98vw;
-  margin: 0 auto;
+  width:80vw;
   position: absolute;
 }
 .img-primeira{
@@ -180,68 +177,61 @@ main{
 .img-segunda{
   height:100vh;
   position: absolute;
-  left: 85vw;
+  left: 87vw;
 }
 .container-esportes{
-  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.esportes{border: solid red;
-  z-index: 8;
-  width: 50vw;
+.esportes{
+  width: 30vw;
+  padding: 5rem;
   margin: 2%;
   border-radius: 15px;
 }
-.esportes p{
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--branco);
-}
 /*IMG - ESPORTES 1 - 12*/
-.esportes-um{border: solid yellow;
-  background: url(../img/esporte1.png) center center;
+.esportes-um{
+  background: url(../img/basquetebol.png) center center;
   background-repeat: no-repeat;
 }
-.esportes-dois{border: solid black;
-  background: url(../img/esporte2.png) center center;
+.esportes-dois{
+  background: url(../img/futsal.png) center center;
   background-repeat: no-repeat;
 }
-.esportes-tres{border: solid pink;
-  background: url(../img/esporte3.png) center center;
+.esportes-tres{
+  background: url(../img/handebol.png) center center;
   background-repeat: no-repeat;
 }
 .esportes-quatro{
-  background: url(../img/esporte4.png) center center;
+  background: url(../img/cabo_de_guerra.png) center center;
   background-repeat: no-repeat;
 }
 .esportes-cinco{
-  background: url(../img/esporte5.png) center center;
+  background: url(../img/bandeirinha.png) center center;
   background-repeat: no-repeat;
 }
 .esportes-seis{
-  background: url(../img/esporte6.png) center center;
+  background: url(../img/gincana_de_matematica.png) center center;
   background-repeat: no-repeat;
 }
 .esportes-sete{
-  background: url(../img/esporte7.png) center center;
+  background: url(../img/tenis_de_mesa.png) center center;
   background-repeat: no-repeat;
 }
 .esportes-oito{
-  background: url(../img/esporte8.png) center center;
+  background: url(../img/fliperama.png) center center;
   background-repeat: no-repeat;
 }.esportes-nove{
-  background: url(../img/esporte9.png) center center;
+  background: url(../img/xadrez.png) center center;
   background-repeat: no-repeat;
 }.esportes-dez{
-  background: url(../img/esporte10.png) center center;
+  background: url(../img/voleibol.png) center center;
   background-repeat: no-repeat;
 }
 .esportes-onze{
-  background: url(../img/esporte11.png) center center;
-  background-repeat: no-repeat;
-}.esportes-doze{
-  background: url(../img/esporte12.png) center center;
+  background: url(../img/triatlon_de_programacao.png) center center;
   background-repeat: no-repeat;
 }
 .btn-mostrar-mais-esportes{
@@ -254,6 +244,50 @@ main{
   padding: 1rem;
   background: #669933
 }
+#sobre{
+  background: url(../img/fundo_sobre.png);
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  color: #fff;
+
+}
+#sobre h1{
+  margin:  0 auto;
+  font-size: 2rem;
+  width: 50vw;
+  text-align: center;
+  border-bottom: solid 5px #fff;
+  padding: 1.5rem;
+}
+#sobre h2{
+    border-bottom: solid 2px;
+    text-align: center;
+    width: 50vw;
+    margin:  0 auto;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.sobre-evento{
+  margin-top: 2%;
+  background: rgba(52, 100, 33, .8);
+  width: 100vw;
+}
+.sobre-evento p{
+  margin: 0 auto;
+  text-align: center;
+  width: 50vw;
+  padding: 2rem;
+}
+.local{
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.local iframe{
+  width: 100%;
+  height: 50vh;
+}
+
 
 /*DESKTOP*/
 @media screen and (min-width: 840px){
@@ -263,10 +297,80 @@ main{
   .btn-fechar-menu{
     display: none;
   }
+  header{
+    height: 15vh;
+  }
+  #ninja-slider{
+    height: 82vh;
+  }
+  div.navsWrapper{
+    top: 70vh;
+  }
+  .container-logo{
+    height: 20vh;
+    width: 25vw;
+    margin-right: 15%;
+
+  }
+  .cabecalho h1 {
+      font-size: 1.4rem;
+  }
+  .segundo-titulo{
+    font-size: 1.2rem;
+  }
   #barra-menu{
+    position: absolute;
+    top: 8vh;
+    right: 5vw;
+    width: 50vw;
     display: flex;
     flex-direction: row;
-    background: #fff;
-    border: solid red;
+  }
+  #barra-menu:active{
+    height: 0;
+  }
+  nav a{
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+  }
+  nav a:hover{
+    border-bottom: solid 5px ;
+    transition: all ease .5s;
+  }
+  nav ul{
+    display: flex;
+  }
+  nav li{
+    margin: 5%;
+  }
+  .close{
+    display: none;
+  }
+  .container-img {
+  	display: flex;
+      max-width: 1500px;
+      min-width: 400px;
+      margin: auto;
+  }
+  .container-esportes{
+    display: flex;
+    width: 90vw;
+  }
+  .esportes {
+      flex: 1;
+
+  }
+  .esportes  p {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .btn-mostrar-mais-esportes{
+    display: none;
   }
 }
