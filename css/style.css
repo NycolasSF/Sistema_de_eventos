@@ -12,8 +12,7 @@
   padding: 0;
 }
 body{
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   transition: all .5s;
 }
 :root{
@@ -84,7 +83,7 @@ header{
 #barra-menu{
   position: fixed;
   z-index: 999;
-  width: 100vw;
+  width: 100%;
   height: 0;
   display: none;
   background: rgba(0, 0, 0, 0.95);
@@ -97,6 +96,7 @@ header{
   transition-duration: 0.8s;
 }
 nav a{
+  text-align: center;
   width: 50vw;
   padding: 8px;
   font-size: 1.5rem;
@@ -112,7 +112,7 @@ nav a{
   top: 10%;
   text-decoration: none;
   padding: .5rem;
-  background: var(--preto);
+  background: var(--preto-transparente);
   right: 25px;
   font-size: 3rem;
   margin-left: 50%;
@@ -122,7 +122,7 @@ nav a{
 /*icon de nav*/
 #icon-nav{
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -144,16 +144,56 @@ main{
   font-family: 'Existence-Light';
 }
 /*---slideSHOW--*/
-#ninja-slider .caption{
-}
-.slider-inner a{
-   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-.caption{
-  background: var(--vermelho-logo-rbga);
-}
+/*references: w3*/
+#slidesShow {
+  height: 50vh;
+ }
+ #Slides{
+   height: 100%;
+   width: 100%;
+ }
+.info-slide{
+   position: absolute;
+   bottom: 35%;;
+   width: 100%;
+   height: 15%;
+   background: var(--vermelho-logo-rbga);
+   color: #fff;
+ }
+ .title-slide{
+   margin-left: 15%;
+   width: 30%;
+   font-size: 1.3rem;
+   border-bottom: solid 2px #fff;
+ }
+ .desc-slide{
+   margin-top: 1%;
+   margin-left: 15%;
+   font-size: 1rem;
+ }
+ .btn-slide{
+   cursor: pointer;
+   position: absolute;
+   top: 40%;
+   color: #fff;
+   background: rgba(0, 0, 0, .8);
+   font-size: 3rem;
+   display: flex;justify-content: center;align-items: center;
+   width: 4%;
+   height: 6%;
+ }
+ .btn-next{
+   right: 0;
+   border-radius: 50px 0px 0px 50px;
+ }
+ .btn-preview{
+   left: 0;
+   border-radius: 50px 0px 0px 50px;
+   transform: rotate(180deg);
+ }
+
 /*---modalidades---*/
+
 #modalidades{
   background: var(--background-modalidades);
 }
@@ -167,7 +207,7 @@ main{
   border-bottom: solid 3px var(--branco);
 }
 .container-img-esportes-fundo{
-  width:80vw;
+  width:100%;
   position: absolute;
 }
 .img-primeira{
@@ -177,62 +217,92 @@ main{
 .img-segunda{
   height:100vh;
   position: absolute;
-  left: 87vw;
+  right: 0;
 }
 .container-esportes{
-  width: 100vw;
+  margin: 0 auto;
+  width: 30vw;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 .esportes{
-  width: 20vw;
-  padding: 5rem;
-  margin: 2%;
+  padding:6rem;
+  margin: 10px;
   border-radius: 15px;
+}
+.btn-mostrar-todos-esportes{
+  margin-left: 39.5%;
+  margin-bottom: 5%;
+  background-color: var(--vermelho-logo);
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.close{
+  display: none;
 }
 /*IMG - ESPORTES 1 - 12*/
 .esportes-um{
   background: url(../img/basquetebol.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .esportes-dois{
   background: url(../img/futsal.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .esportes-tres{
   background: url(../img/handebol.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .esportes-quatro{
   background: url(../img/cabo_de_guerra.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .esportes-cinco{
   background: url(../img/bandeirinha.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .esportes-seis{
   background: url(../img/gincana_de_matematica.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .esportes-sete{
   background: url(../img/tenis_de_mesa.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .esportes-oito{
   background: url(../img/fliperama.png) center center;
   background-repeat: no-repeat;
-}.esportes-nove{
+  background-size: 100%;
+}
+.esportes-nove{
   background: url(../img/xadrez.png) center center;
   background-repeat: no-repeat;
-}.esportes-dez{
+  background-size: 100%;
+}
+.esportes-dez{
   background: url(../img/voleibol.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .esportes-onze{
   background: url(../img/triatlon_de_programacao.png) center center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .btn-mostrar-mais-esportes{
   position: absolute;
@@ -270,7 +340,6 @@ main{
 .sobre-evento{
   margin-top: 2%;
   background: rgba(52, 100, 33, .8);
-  width: 100vw;
 }
 .sobre-evento p{
   margin: 0 auto;
@@ -287,6 +356,37 @@ main{
   width: 100%;
   height: 50vh;
 }
+/*FOOTER*/
+footer{
+  background: var(--preto);
+  height: 55vh;
+  color: #fff;
+}
+footer h1{
+  font-size: 1rem;
+}
+.copyright{
+  margin-top: 2%;
+  text-align: center;
+}
+.container-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.container-footer a {
+  margin-left: 25%;
+  border-bottom: solid 3px #fff;
+  color: var(--vermelho-logo);
+}
+.logo-footer{
+  width: 15%;
+  height: 15%;
+}
+
 
 
 /*DESKTOP*/
@@ -300,15 +400,9 @@ main{
   header{
     height: 15vh;
   }
-  #ninja-slider{
-    height: 82vh;
-  }
-  div.navsWrapper{
-    top: 70vh;
-  }
   .container-logo{
     height: 20vh;
-    width: 25vw;
+    width: 20vw;
     margin-right: 15%;
 
   }
@@ -349,28 +443,30 @@ main{
     margin: 5%;
   }
   .close{
-    display: none;
+    display: block
   }
-  .container-img {
-  	display: flex;
-      max-width: 1500px;
-      min-width: 400px;
-      margin: auto;
+  #slidesShow{
+    height: 85vh;
+  }
+  .info-slide{
+    bottom: 15%;
+  }
+  /* MODALIDADES */
+  .title-modalidades{
+    font-size: 3rem;
   }
   .container-esportes{
-    display: flex;
-    width: 90vw;
+    width: 60vw;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
-  .esportes {
-      flex: 1;
-
+  .esportes{
+    padding: 6rem;
   }
-  .esportes  p {
-      font-size: 2rem;
-      text-align: center;
-  }
-
-  .btn-mostrar-mais-esportes{
+  .btn-mostrar-todos-esportes{
     display: none;
+  }
+  #sobre h1{
+    font-size: 3rem;
   }
 }

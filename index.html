@@ -7,11 +7,8 @@
     <link rel="shortcut icon" href="img/favicon.ico" />
     <script type="text/javascript" src="js/efeitos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <!-- REFERENCES: http://www.menucool.com/responsive-slider  -->
-    <link href="packs/ninja-slider/2/ninja-slider.css" rel="stylesheet" type="text/css" />
-    <script src="packs/ninja-slider/2/ninja-slider.js" type="text/javascript"></script>
   </head>
-  <body>
+  <body onload="slide1()">
     <header id="home">
 <!-- HEADER -->
       <div class="cabecalho">
@@ -37,7 +34,7 @@
       <nav id="barra-menu">
         <button  class="btn-fechar-menu" onclick="efeitos.fechar_menu()">&times;</button>
         <ul>
-          <li ><a href="#home">HOME</a></li>
+          <li ><a href="#home" onclick="efeitos.linkClicado()">HOME</a></li>
           <li><a href="#modalidades">MODALIDADES</a></li>
           <li><a href="#sobre">SOBRE O EVENTO</a></li>
         </ul>
@@ -46,60 +43,36 @@
 <!-- MAIN -->
     <main>
 <!-- SLIDES SHOW -->
-      <section class="slidesShow">
-        <!--start-->
-        <div id="ninja-slider">
-            <div class="slider-inner">
-                <ul>
-                    <li>
-                        <a class="ns-img" href="img/slide01.png"></a>
-                        <div class="caption">Jogos Interno IFMS</div>
-                    </li>
-                    <li>
-                        <a class="ns-img" href="img/slide02.png"></a>
-                        <div class="caption">TOUCH·ENABLED</div>
-                    </li>
-                    <li>
-                        <a class="ns-img" href="img/slide03.png"></a>
-                        <div class="caption">VIDEO·AUDIO</div>
-                      </li>
-                    <li>
-                        <a class="ns-img" href="img/slide04.png"></a>
-                        <div class="caption">NON·JQUERY</div>
-                    </li>
-                    <li>
-                        <a class="ns-img" href="img/slide05.png"></a>
-                        <div class="caption">MOBILE·FRIENDLY</div>
-                    </li>
-                </ul>
-                <div class="navsWrapper">
-                    <div id="ninja-slider-prev"></div>
-                    <div id="ninja-slider-next"></div>
-                </div>
-            </div>
+      <section id="slidesShow">
+        <img id="Slides"></img>
+        <div class="info-slide">
+          <h2 class="title-slide"></h2>
+          <p class="desc-slide"></p>
         </div>
-        <!--end-->
+        <div class="btn-slide btn-next" onclick="nextSlide()">></div>
+        <div class="btn-slide btn-preview" onclick="previewSlide()">></div>
       </section>
 <!-- MODALIDADES -->
       <section id="modalidades">
         <h1 class="title-modalidades">MODALIDADES</h1>
         <div class="container-img-esportes-fundo">
-          <img class="img-primeira" src="img/barra-lateral.png"></img>
+          <img class="img-primeira  " src="img/barra-lateral.png"></img>
           <img class="img-segunda" src="img/barra-lateral.png"></img>
         </div>
         <div class="container-esportes">
           <div class="esportes esportes-um"></div>
           <div class="esportes esportes-dois"></div>
           <div class="esportes esportes-tres"></div>
-          <div class="esportes esportes-quatro"></div>
-          <div class="esportes esportes-cinco"></div>
-          <div class="esportes esportes-seis"></div>
-          <div class="esportes esportes-sete"></div>
-          <div class="esportes esportes-oito"></div>
-          <div class="esportes esportes-nove"></div>
-          <div class="esportes esportes-dez"></div>
-          <div class="esportes esportes-onze"></div>
+          <div class="esportes esportes-quatro close"></div>
+          <div class="esportes esportes-cinco close"></div>
+          <div class="esportes esportes-seis close"></div>
+          <div class="esportes esportes-sete close"></div>
+          <div class="esportes esportes-oito close"></div>
+          <div class="esportes esportes-nove close"></div>
+          <div class="esportes esportes-dez close"></div>
+          <div class="esportes esportes-onze close"></div>
         </div>
+        <button class="btn-mostrar-todos-esportes" onclick="efeitos.mostrarTodosEsportes()">Mostrar Todos</button>
       </section>
       <section id="sobre">
         <h1>INFORMAÇÕES SOBRE O EVENTO</h1>
@@ -115,9 +88,28 @@
       </section>
     </main>
     <footer>
-
+      <div class="container-footer">
+        <div class="logo-footer">
+          <img src="img/logo.svg" alt="logo">
+          <p>JIIF - Jogos Interno do IFMS </p>
+        </div>
+        <a class="/acesso-restrito" href="#">Acesso restrito</a>
+      </div>
+      <div class="copyright">
+        <h1>&copy 2018 - COMISSÃO DE TI</h1>
+        <p>MEMBROS</p>
+          <div class="membros">
+            <ul>
+              <li>Nycolas Silva Fróes</li>
+              <li>Marcos Lopes Gonçalves</li>
+              <li>Pedro Garcia Tommaselli Chuba Machado</li>
+              <li>Raysa Caroline Estigarribia de Lima</li>
+              <li>João Marcos Coelho Castro Troquez</li>
+            </ul>
+          </div>
+      </div>
     </footer>
     <script type="text/javascript" src="js/effect-roll.js"></script>
-
+    <script type="text/javascript" src="js/slideSHOW.js"></script>
   </body>
 </html>
