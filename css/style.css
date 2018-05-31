@@ -365,7 +365,25 @@ footer{
 footer h1{
   font-size: 1rem;
 }
+.fa {
+    padding: 20px;
+    margin: .5%;
+    font-size: 3rem;
+    width: 50px;
+    border-radius: 5%;
+    text-align: center;
+    text-decoration: none;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: #fff;
+}
+.fa-instagram {
+  background: #125688;
+  color: #fff;
+}
 .copyright{
+  font-size: .8rem;
   margin-top: 2%;
   text-align: center;
 }
@@ -377,10 +395,10 @@ footer h1{
   font-size: 1.5rem;
   text-align: center;
 }
-.container-footer a {
+.acesso-restrito {
   margin-left: 25%;
   border-bottom: solid 3px #fff;
-  color: var(--vermelho-logo);
+  color: rgb(240,37,42);
 }
 .logo-footer{
   width: 15%;
@@ -390,7 +408,7 @@ footer h1{
 
 
 /*DESKTOP*/
-@media screen and (min-width: 840px){
+@media screen and (min-width: 1382px){
   #icon-nav{
     display: none;
   }
