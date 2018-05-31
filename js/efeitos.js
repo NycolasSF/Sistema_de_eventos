@@ -9,8 +9,14 @@ class Efeitos{
 		document.body.style.backgroundColor = "rgb(255,255,255)";
 	}
 	linkClicado(){
-			document.getElementById("barra-menu").style.display = "none";
-			document.getElementById("icon-nav").style.display = "flex";
+			// document.getElementById("barra-menu").classList.add('.close');
+			var element, name, arr;
+				element = document.getElementById("barra-menu");
+				name = "close";
+				arr = element.className.split(" ");
+				if (arr.indexOf(name) == -1) {
+						element.className += " " + name;
+		}
 	}
 	mostrarTodosEsportes(){
 		var x = document.querySelectorAll(".close");
@@ -24,3 +30,15 @@ class Efeitos{
 	}
 }
 var efeitos = new Efeitos();
+
+function loader() {
+	setTimeout(slide1(), 1000);
+	setTimeout(showPage, 3000);
+
+}
+function showPage() {
+	document.getElementById("loader").style.display = "none";
+	document.getElementById('home').style.display = "flex";
+	document.getElementById('main').style.display = "block";
+	document.getElementById('rodape').style.display = "block";
+}

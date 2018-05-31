@@ -9,9 +9,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body onload="slide1()">
-    <header id="home">
+  <body onload="loader()" >
+<!-- TEST ANIMAÇÃO -->
+    <div id="loader"> </div>
 <!-- HEADER -->
+    <header id="home">
       <div class="cabecalho">
         <div class="container-logo">
           <img src="img/logo.svg" alt="logo JIIF">
@@ -42,7 +44,7 @@
       </nav>
     </header>
 <!-- MAIN -->
-    <main>
+    <main id="main">
 <!-- SLIDES SHOW -->
       <section id="slidesShow">
         <img id="Slides"></img>
@@ -50,8 +52,8 @@
           <h2 class="title-slide"></h2>
           <p class="desc-slide"></p>
         </div>
-        <div class="btn-slide btn-next" onclick="nextSlide()">></div>
-        <div class="btn-slide btn-preview" onclick="previewSlide()">></div>
+        <!-- <div class="btn-slide btn-next" onclick="nextSlide()">></div> -->
+        <!-- <div class="btn-slide btn-preview" onclick="previewSlide()">></div> -->
       </section>
 <!-- MODALIDADES -->
       <section id="modalidades">
@@ -93,7 +95,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="rodape">
       <div class="container-footer">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-instagram"></a>
